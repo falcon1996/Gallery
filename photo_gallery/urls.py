@@ -17,9 +17,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls import url
 from django.contrib import admin
+from photos.views import photo_list
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', photo_list, name='photo_list')
 ]
 
 if settings.DEBUG:
